@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing Ninja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        img {
+            margin: 5px;
+            width: 20%;
+            height: 20%;
+            border: 1px solid #333;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('img').click(e => {
+                $(e.target).fadeOut();
+            });
+            $('button').click(() => {
+                $('img').fadeIn();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Disapparing Ninja</h1>
+        <div class="row">
+            <img src="ninja.png">
+            <img src="ninja.png">
+            <img src="ninja.png">
+            <img src="ninja.png">
+            <img src="ninja.png">
+            <img src="ninja.png">
+            <img src="ninja.png">
+            <img src="ninja.png">
+        </div> <!-- row -->
+        <button class="btn btn-primary">Restore</button>
+    </main>
+</body>
+
+</html>
