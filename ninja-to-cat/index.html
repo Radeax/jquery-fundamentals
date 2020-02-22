@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja to ninja</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <style>
+        img {
+            margin-bottom: 5px;
+        }
+
+        section {
+            margin-top: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="row h-100 flex-column justify-content-center align-items-center">
+        <img src="img/ninja0.png" data-alt-src="img/cat0.png">
+        <img src="img/ninja1.png" data-alt-src="img/cat1.png">
+        <img src="img/ninja2.png" data-alt-src="img/cat2.png">
+        <img src="img/ninja3.png" data-alt-src="img/cat3.png">
+        <img src="img/ninja4.png" data-alt-src="img/cat4.png">
+    </section>
+
+    <script>
+        $('img').click(function () {
+            temp = $(this).attr('src');
+            $(this).attr('src', $(this).attr('data-alt-src'));
+            $(this).attr('data-alt-src', temp);
+        })
+    </script>
+</body>
+
+</html>
