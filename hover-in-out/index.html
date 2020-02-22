@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover In/Out</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            const swap = function () {
+                const src = $(this).attr('src');
+                const alt = $(this).attr('alt');
+                $(this).attr('src', $(this).attr('alt-data-src'));
+                $(this).attr('alt', $(this).attr('alt-alt'));
+                $(this).attr('alt-data-src', src);
+                $(this).attr('alt-alt', alt);
+            };
+            $('img').hover(swap, swap);
+        });
+    </script>
+</head>
+
+<body>
+    <main class="row">
+        <div class="col">
+            <img src="img/tentacool.png" alt="Tentacool" alt-data-src="img/tentacruel.png" alt-alt="Tentacruel">
+            <img src="img/pikachu.png" alt="Pikachu" alt-data-src="img/raichu.png" alt-alt="Raichu">
+            <img src="img/vulpix.png" alt="Vulpix" alt-data-src="img/9tails.png" alt-alt="Ninetails">
+            <img src="img/margikarp.png" alt="Magikarp" alt-data-src="img/gyarados.png" alt-alt="Gyarados">
+        </div>
+    </main>
+</body>
+
+</html>
