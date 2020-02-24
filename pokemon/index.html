@@ -8,18 +8,43 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script>
-        $(document).ready(function () {
-            for (let i = 1; i <= 151; i++) {
-                $('section').append('<img src="http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + i + '.png">');
-            }
-        });
-    </script>
+
+    <script src="script.js"></script>
+    <style>
+        #pokedex {
+            top: 0;
+            position: sticky;
+            display: block;
+        }
+
+        #pokedex .card {
+            top: 10vh;
+            position: sticky;
+        }
+    </style>
 </head>
 
 <body class="container">
-    <section class="row">
-    </section>
+    <div class="row">
+        <div id="pokelist" class="col-md-8 order-2 order-md-1">
+        </div>
+        <div id="pokedex" class="col-md-4 order-1">
+            <div class="card">
+                <h4 class="card-header text-capitalize text-center sticky"></h4>
+                <img class="align-self-center">
+                <div class="card-body">
+                    <div class="border">
+                        <h5 class="card-title card-header">Types</h5>
+                        <ul id="types" class="list-group list-group-flush">
+                        </ul>
+                        <h5 class="card-title card-header border-top">Height</h5>
+                        <div id="height" class="p-2 ml-2"></div>
+                        <h5 class="card-title card-header border-top">Weight</h5>
+                        <div id="weight" class="p-2 ml-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
